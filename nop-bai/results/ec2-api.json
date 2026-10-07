@@ -1,9 +1,21 @@
 {
   "base_url": "http://52.90.230.2:8080",
+  "source": "Actual EC2 API after GitHub Actions Release of updated model",
+  "model_report": {
+    "f1_score": 0.7354260089686099,
+    "accuracy": 0.882,
+    "params": {
+      "learning_rate": 0.1,
+      "max_depth": 5,
+      "n_estimators": 200
+    },
+    "train_samples": 44722,
+    "eval_samples": 500,
+    "run_id": "7315e1616f4748f98495bc9d38e7fc57"
+  },
   "health": {
     "status": "ok"
   },
-  "source": "Actual public EC2 API; manually bootstrapped baseline model",
   "scores": [
     {
       "features": [
@@ -41,5 +53,6 @@
         "label": "thu_nhap_cao"
       }
     }
-  ]
+  ],
+  "actions_run": "https://github.com/HnivGnad/K4-L3-DAY21-DangTheVinh-2A202602587-CI-CD-for-AI-Systems-/actions/runs/37645799385"
 }

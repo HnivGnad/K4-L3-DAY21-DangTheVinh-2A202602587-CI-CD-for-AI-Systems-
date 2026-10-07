@@ -369,3 +369,9 @@ Bắt đầu: [Bước 1 - Thực nghiệm cục bộ](tasks/buoc-1.md)
 ## Cấu hình AWS cho dự án này
 
 Dự án sử dụng AWS S3 và EC2. Hướng dẫn chạy, cấu hình DVC, GitHub Secrets và service nằm tại [deploy/README-AWS.md](deploy/README-AWS.md). Các ví dụ GCP trong bài lab gốc là tài liệu tham khảo; mã nguồn hiện dùng boto3 và dvc[s3]. Screenshot được bỏ qua theo yêu cầu.
+
+## Kết quả triển khai AWS
+
+Bucket: income-lab-vinh-2a202602587-20261007-01, region us-east-1. API: http://52.90.230.2:8080/docs (security group giới hạn IP máy người dùng). Train batch1 hiện có 44.722 mẫu; tránh chạy append_batch.py lần nữa với dữ liệu hiện tại. Báo cáo và bằng chứng thực nằm trong nop-bai/.
+
+Với repository fork, bật workflow nếu push chưa tạo run dù Run workflow hoạt động. Dự án đã kiểm tra event push sau khi enable workflow.

@@ -36,7 +36,10 @@ Adult có khoảng 24,8% mẫu thu nhập cao. Mô hình luôn dự đoán thu n
 
 | | f1_score | accuracy |
 |---|---|---|
-| Bước 2 (mô phỏng cục bộ, 22.361 mẫu) | 0.714932 | 0.874000 |
-| Bước 3 (mô phỏng cục bộ, 44.722 mẫu) | 0.735426 | 0.882000 |
+| Bước 2 (GitHub Actions, 22.361 mẫu) | 0.714932 | 0.874000 |
+| Bước 3 (GitHub Actions, 44.722 mẫu) | 0.735426 | 0.882000 |
 
-**Nhận xét:** F1 thay đổi +0.020494 khi gấp đôi dữ liệu cùng nguồn, với cùng bộ tham số và holdout. Thêm dữ liệu không đảm bảo cải thiện vì phân phối tương tự và holdout chỉ có 500 mẫu. DVC push và API EC2 đã kiểm tra thành công với model baseline khởi động thủ công; chưa xác nhận hai lần Actions, nên bảng dùng số liệu local. Screenshot được bỏ qua.
+**Nhận xét:** F1 thay đổi +0.020494 khi gấp đôi dữ liệu cùng nguồn, với cùng bộ tham số và holdout. Thêm dữ liệu không đảm bảo cải thiện vì phân phối tương tự và holdout chỉ có 500 mẫu. Hai lần huấn luyện cloud và lần push chỉ đổi chú thích DVC đã thành công; phần trigger được xác minh sau khi bật workflow repo fork. Screenshot được bỏ qua.
+
+Actions: [baseline](https://github.com/HnivGnad/K4-L3-DAY21-DangTheVinh-2A202602587-CI-CD-for-AI-Systems-/actions/runs/37644362651) | [updated](https://github.com/HnivGnad/K4-L3-DAY21-DangTheVinh-2A202602587-CI-CD-for-AI-Systems-/actions/runs/37645226460).
+[Automatic data-only push](https://github.com/HnivGnad/K4-L3-DAY21-DangTheVinh-2A202602587-CI-CD-for-AI-Systems-/actions/runs/37645799385).

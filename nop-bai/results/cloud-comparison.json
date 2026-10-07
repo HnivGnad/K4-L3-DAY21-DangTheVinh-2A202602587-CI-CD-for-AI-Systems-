@@ -1,0 +1,117 @@
+{
+  "execution": "Actual GitHub Actions: baseline and updated-data dispatches; automatic push verification after enabling fork workflow",
+  "automatic_trigger_verified": true,
+  "baseline": {
+    "f1_score": 0.7149321266968326,
+    "accuracy": 0.874,
+    "params": {
+      "learning_rate": 0.1,
+      "max_depth": 5,
+      "n_estimators": 200
+    },
+    "train_samples": 22361,
+    "eval_samples": 500,
+    "run_id": "21bf86628be848bbbd1672ffa6c843f1"
+  },
+  "baseline_run": {
+    "id": 37644362651,
+    "attempt": 1,
+    "url": "https://github.com/HnivGnad/K4-L3-DAY21-DangTheVinh-2A202602587-CI-CD-for-AI-Systems-/actions/runs/37644362651",
+    "event": "workflow_dispatch",
+    "head_sha": "de18b9df63e7289ee24086a3d14d4f856aed43ed"
+  },
+  "baseline_jobs": [
+    {
+      "name": "Unit Test",
+      "conclusion": "success"
+    },
+    {
+      "name": "Train",
+      "conclusion": "success"
+    },
+    {
+      "name": "Quality Gate",
+      "conclusion": "success"
+    },
+    {
+      "name": "Release",
+      "conclusion": "success"
+    }
+  ],
+  "updated": {
+    "f1_score": 0.7354260089686099,
+    "accuracy": 0.882,
+    "params": {
+      "learning_rate": 0.1,
+      "max_depth": 5,
+      "n_estimators": 200
+    },
+    "train_samples": 44722,
+    "eval_samples": 500,
+    "run_id": "37ddb893f75c45e183088214d1aed267"
+  },
+  "updated_run": {
+    "id": 37645226460,
+    "attempt": 1,
+    "url": "https://github.com/HnivGnad/K4-L3-DAY21-DangTheVinh-2A202602587-CI-CD-for-AI-Systems-/actions/runs/37645226460",
+    "event": "workflow_dispatch",
+    "head_sha": "395c0cf61a7e05673828415562c6888977d88f66"
+  },
+  "updated_jobs": [
+    {
+      "name": "Unit Test",
+      "conclusion": "success"
+    },
+    {
+      "name": "Train",
+      "conclusion": "success"
+    },
+    {
+      "name": "Quality Gate",
+      "conclusion": "success"
+    },
+    {
+      "name": "Release",
+      "conclusion": "success"
+    }
+  ],
+  "automatic_run": {
+    "id": 37645799385,
+    "url": "https://github.com/HnivGnad/K4-L3-DAY21-DangTheVinh-2A202602587-CI-CD-for-AI-Systems-/actions/runs/37645799385",
+    "event": "push",
+    "head_sha": "6b7f9b31606bad9c3b2fb877f23c93ddda635ea2",
+    "changed_files": [
+      "data/train_batch1.csv.dvc"
+    ],
+    "report": {
+      "f1_score": 0.7354260089686099,
+      "accuracy": 0.882,
+      "params": {
+        "learning_rate": 0.1,
+        "max_depth": 5,
+        "n_estimators": 200
+      },
+      "train_samples": 44722,
+      "eval_samples": 500,
+      "run_id": "7315e1616f4748f98495bc9d38e7fc57"
+    },
+    "jobs": [
+      {
+        "name": "Unit Test",
+        "conclusion": "success"
+      },
+      {
+        "name": "Train",
+        "conclusion": "success"
+      },
+      {
+        "name": "Quality Gate",
+        "conclusion": "success"
+      },
+      {
+        "name": "Release",
+        "conclusion": "success"
+      }
+    ]
+  }
+}

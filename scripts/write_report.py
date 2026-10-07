@@ -7,7 +7,12 @@ def main():
     destination = Path("nop-bai")
     experiments = json.loads((destination / "results/experiments.json").read_text())
     comparison = json.loads((destination / "results/comparison.json").read_text())
+    cloud_path = destination / "results/cloud-comparison.json"
+    cloud = json.loads(cloud_path.read_text()) if cloud_path.exists() else None
+    if cloud:
+        comparison = cloud
     baseline, updated = comparison["baseline"], comparison["updated"]
+    measurement_source = "GitHub Actions" if cloud else "local simulation"
     params = baseline["params"]
     rows = "\n".join(
         f"| {i} | {r['params']['n_estimators']} | {r['params']['learning_rate']} | "
@@ -57,6 +62,15 @@ Adult có khoảng 24,8% mẫu thu nhập cao. Mô hình luôn dự đoán thu n
 
 **Nhận xét:** F1 thay đổi {delta:+.6f} khi gấp đôi dữ liệu cùng nguồn, với cùng bộ tham số và holdout. Thêm dữ liệu không đảm bảo cải thiện vì phân phối tương tự và holdout chỉ có 500 mẫu. DVC push và API EC2 đã kiểm tra thành công với model baseline khởi động thủ công; chưa xác nhận hai lần Actions, nên bảng dùng số liệu local. Screenshot được bỏ qua.
 """
+    if cloud:
+        report = report.replace("mô phỏng cục bộ", measurement_source)
+        old_status = "DVC push và API EC2 đã kiểm tra thành công với model baseline khởi động thủ công; chưa xác nhận hai lần Actions, nên bảng dùng số liệu local."
+        report = report.replace(old_status, "Hai lần huấn luyện cloud và lần push chỉ đổi chú thích DVC đã thành công; phần trigger được xác minh sau khi bật workflow repo fork.")
+        if not cloud.get("automatic_trigger_verified", False):
+            report = report.replace("Hai lần huấn luyện cloud và lần push chỉ đổi chú thích DVC đã thành công; phần trigger được xác minh sau khi bật workflow repo fork.", "Hai lần pipeline cloud đã thành công qua workflow_dispatch; commit dữ liệu đã push nhưng GitHub chưa tự tạo run, nên chưa xác nhận trigger push.")
+        report += "\nActions: [baseline](" + cloud["baseline_run"]["url"] + ") | [updated](" + cloud["updated_run"]["url"] + ").\n"
+        if cloud.get("automatic_run"):
+            report += "[Automatic data-only push](" + cloud["automatic_run"]["url"] + ").\n"
     (destination / "bao-cao.md").write_text(report, encoding="utf-8")
     print(f"Report written: {len(report.split())} whitespace-delimited words")
 
