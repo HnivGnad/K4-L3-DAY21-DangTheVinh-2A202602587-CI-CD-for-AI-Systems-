@@ -18,12 +18,16 @@ nop-bai/
 
 ---
 
+## Trạng thái thực hiện
+
+Screenshot được bỏ qua theo yêu cầu của chủ dự án. Số liệu cục bộ và trạng thái cloud được ghi trong báo cáo; các mục cloud chỉ được đánh dấu hoàn thành khi có bằng chứng thực thi.
+
 ## Checklist Trước Khi Nộp
 
 Đánh dấu `[x]` khi hoàn thành từng mục:
 
 - [ ] Repo GitHub ở chế độ **public** và chứa toàn bộ code, cấu hình đã hoàn thiện.
-- [ ] Đủ 5 ảnh trong `anh-chup-man-hinh/`, đúng tên file, đúng thứ tự (xem
+- [ ] (Bỏ qua theo yêu cầu) Đủ 5 ảnh trong `anh-chup-man-hinh/`, đúng tên file, đúng thứ tự (xem
       [yêu cầu chi tiết](anh-chup-man-hinh/README.md)).
 - [ ] `bao-cao.md` đã điền đủ 3 mục bắt buộc và không vượt quá 1 trang A4.
 - [ ] Đã `git push` toàn bộ thư mục `nop-bai/` lên GitHub.

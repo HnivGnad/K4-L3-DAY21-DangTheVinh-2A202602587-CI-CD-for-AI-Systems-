@@ -1,0 +1,45 @@
+{
+  "base_url": "http://52.90.230.2:8080",
+  "health": {
+    "status": "ok"
+  },
+  "source": "Actual public EC2 API; manually bootstrapped baseline model",
+  "scores": [
+    {
+      "features": [
+        60,
+        2,
+        5,
+        2,
+        4,
+        0,
+        1,
+        0,
+        0,
+        45
+      ],
+      "response": {
+        "prediction": 0,
+        "label": "thu_nhap_thap"
+      }
+    },
+    {
+      "features": [
+        28,
+        2,
+        14,
+        2,
+        11,
+        0,
+        1,
+        0,
+        0,
+        45
+      ],
+      "response": {
+        "prediction": 1,
+        "label": "thu_nhap_cao"
+      }
+    }
+  ]
+}

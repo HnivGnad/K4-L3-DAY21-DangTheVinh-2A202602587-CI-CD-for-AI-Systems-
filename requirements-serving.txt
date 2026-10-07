@@ -1,0 +1,9 @@
+﻿# Inference-only environment, matching the trained model's numerical libraries.
+fastapi==0.111.0
+uvicorn==0.29.0
+scikit-learn==1.4.2
+pandas==2.2.2
+numpy==1.26.4
+scipy==1.15.3
+joblib==1.4.2
+boto3==1.34.106

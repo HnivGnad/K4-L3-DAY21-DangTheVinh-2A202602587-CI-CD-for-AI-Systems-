@@ -365,3 +365,7 @@ Xem phần xử lý sự cố chi tiết trong từng file hướng dẫn:
 ---
 
 Bắt đầu: [Bước 1 - Thực nghiệm cục bộ](tasks/buoc-1.md)
+
+## Cấu hình AWS cho dự án này
+
+Dự án sử dụng AWS S3 và EC2. Hướng dẫn chạy, cấu hình DVC, GitHub Secrets và service nằm tại [deploy/README-AWS.md](deploy/README-AWS.md). Các ví dụ GCP trong bài lab gốc là tài liệu tham khảo; mã nguồn hiện dùng boto3 và dvc[s3]. Screenshot được bỏ qua theo yêu cầu.

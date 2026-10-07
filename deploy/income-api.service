@@ -1,0 +1,15 @@
+[Unit]
+Description=Adult Income FastAPI
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/income-api
+EnvironmentFile=/home/ubuntu/income-api/deploy/income-api.env
+ExecStart=/home/ubuntu/income-api/.venv/bin/python /home/ubuntu/income-api/src/serve.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

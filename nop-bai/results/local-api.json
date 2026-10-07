@@ -1,0 +1,44 @@
+{
+  "execution": "local TestClient with real trained model; not EC2",
+  "scores": [
+    {
+      "features": [
+        60,
+        2,
+        5,
+        2,
+        4,
+        0,
+        1,
+        0,
+        0,
+        45
+      ],
+      "response": {
+        "prediction": 0,
+        "label": "thu_nhap_thap"
+      }
+    },
+    {
+      "features": [
+        28,
+        2,
+        14,
+        2,
+        11,
+        0,
+        1,
+        0,
+        0,
+        45
+      ],
+      "response": {
+        "prediction": 1,
+        "label": "thu_nhap_cao"
+      }
+    }
+  ],
+  "healthz": {
+    "status": "ok"
+  }
+}

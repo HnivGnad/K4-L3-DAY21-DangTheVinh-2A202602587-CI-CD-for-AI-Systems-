@@ -1,8 +1,8 @@
 import pandas as pd
 import os
 
-TRAIN_URL = "https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data"
-TEST_URL  = "https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.test"
+TRAIN_URL = os.getenv("ADULT_TRAIN_URL", "https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data")
+TEST_URL = os.getenv("ADULT_TEST_URL", "https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.test")
 
 # 15 cot goc cua bo du lieu Adult (file CSV khong co dong tieu de)
 RAW_COLUMNS = [

@@ -11,3 +11,12 @@ sa-key.json
 __pycache__/
 *.pyc
 .DS_Store
+
+.tools/
+.pytest_cache/
+mlruns/
+mlflow.db-shm
+mlflow.db-wal
+.aws/
+*.pem
+deploy/income-api.env
